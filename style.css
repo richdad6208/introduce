@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --ff-primary: "Pretendard-Regular", sans-serif;
+
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* general-styling */
+body {
+  font-family: var(--ff-primary);
+  word-break: keep-all;
+  text-align: center;
+  line-height: 1.5;
+}
+p {
+  width: 42ch;
+}
+.nav-list {
+  display: flex;
+}
+section {
+  height: 100vh;
+}
+.section-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* header */
+.primary-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list > li > a {
+  padding: 1em;
+}
+/* skill */
+.skills .even-columns {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.skill-card {
+  box-shadow: var(--box-shadow);
+}
+/* utility */
+.container {
+  --max-width: 1100px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.py-1 {
+  padding-block: 1rem;
+}
+.py-2 {
+  padding-block: 2rem;
+}
+.py-3 {
+  padding-block: 3rem;
+}
+.py-4 {
+  padding-block: 4rem;
+}
